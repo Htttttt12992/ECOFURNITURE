@@ -1,12 +1,111 @@
-{% extends "base.html" %}
-{% block title %}EcoFurniture - Contact us{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-{% block content %}
+
+<div class="section__container logo__header">
+    <img src="../static/assets/logo.webp" alt="icon"/>
+    <div class="contact__us">
+        <p><i class="ri-mail-fill"></i> ecofurniture@gmail.com</p>
+        <p><i class="ri-phone-fill"></i> +919876543210</p>
+    </div>
+</div>
 <nav>
-  {% block navbar %} {% include 'includes/product_navbar.html' %} {% endblock %}
+    {% block navbar %} {% include 'includes/product_navbar.html' %} {% endblock %}
 </nav>
 
 <style>
+
+nav {
+          background-color: var(--primary-color);
+        }
+
+        .nav__links {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav__links a {
+    font-size: 0.9rem;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.nav__links a:hover {
+    color: var(--secondary-color);
+}
+
+        header {
+          min-height: 30rem;
+          background-image: url("assets/header-bg.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .header__container {
+          height: 30rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          color: var(--text-dark);
+        }
+
+        .header__container h1 {
+          font-size: 4rem;
+        }
+
+        .header__container button {
+          margin-top: 1rem;
+          padding: 1rem 2rem;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          color: var(--white);
+          background-color: var(--primary-color);
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .header__container button:hover {
+          background-color: var(--primary-color-dark);
+        }
+nav {
+          background-color: var(--primary-color);
+        }
+  .section__container {
+          max-width: var(--max-width);
+          margin: auto;
+          padding: 0.8  rem 1rem;
+
+        }
+
+        .section__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          flex-wrap: wrap;
+          margin-bottom: 4rem;
+        }
+
+        .section__title {
+          font-size: 2rem;
+          font-weight: 600;
+          color: var(--text-dark);
+        }
   .intro{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -301,6 +400,8 @@ label {
 }
 
 </style>
+  </head>
+  <body>
 
 <div class="intro">
   <h1 class="display-4">Contact us</h1>
@@ -542,6 +643,6 @@ document.getElementById('closeChatbot').addEventListener('click', function() {
 
 </script>
 
+  </body>
 
 
-{% endblock %}
